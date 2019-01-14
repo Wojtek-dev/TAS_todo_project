@@ -1,0 +1,22 @@
+<div class="all">
+  <form class="container">
+    <img src="https://support.any.do/wp-content/uploads/2018/07/icon-small.png">      
+    <h1 class="h3 mb-3 font-weight-normal">Switch dashboard</h1>
+    <table>
+      <tr class="header">
+        <th>Name</th>
+      </tr>
+      <tr *ngFor="let d of dashboards" class="cell">
+        <td>{{d.name}}</td>
+        <td class="buttons">
+          <button class="btn btn-lg btn-primary btn-block" (click)="chooseDashboard(d)">Choose</button>
+          <p class="space"> </p>
+          <button class="btn btn-lg btn-primary btn-block" (click)="deleteDashboard(d)">Delete</button>
+        </td>
+      </tr>
+    </table>
+    <br/>
+    <button class="btn btn-lg btn-primary btn-block button" (click)="back()">Back</button>   
+    <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>    
+  </form>
+</div>

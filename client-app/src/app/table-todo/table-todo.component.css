@@ -1,0 +1,24 @@
+.container{
+    width: 50vw;
+    text-align: center;
+}
+table{
+    width: 100%;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+.two-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.button{
+    margin-top: 0!important;
+}
+.space{
+    width: 15px;
+}
+img{
+    width: 20vw
+}

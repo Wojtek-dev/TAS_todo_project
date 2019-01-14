@@ -1,0 +1,41 @@
+<div class="all">
+  <form class="container">
+    <img src="https://support.any.do/wp-content/uploads/2018/07/icon-small.png">      
+    <div class="header"><h2>{{name}} dashboard</h2></div>
+    <br/>
+    <input placeholder="Write task" class="form-control" type="text" #newTodo/>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="addTodo(newTodo.value); newTodo.value=''">Add</button>    
+
+    <br/>
+
+    <table>
+      <tr>
+        <th>Task</th>
+        <th>Done</th>
+      </tr>
+      <tr *ngFor="let todo of currentTasks">
+        <td>{{todo.context}}</td>
+        <td>{{todo.idStatus == "9" ? '&#10003;' : '&#10005;'}}</td>  
+        <td>
+          <button class="btn btn-lg btn-primary btn-block" (click)="doneTodo(todo)">Done</button>                        
+        </td>
+        <td>
+          <button class="btn btn-lg btn-primary btn-block" (click)="deleteTodo(todo)">Delete</button>            
+        </td>
+      </tr>
+    </table>
+    <br/>
+    <div class="two-buttons">
+      <button class="btn btn-lg btn-primary btn-block button" (click)="addDashboard()">Create new dashboard</button>            
+      <div class="space"></div>
+      <button class="btn btn-lg btn-primary btn-block button" (click)="switchDashboard()">Switch dashboard</button>      
+      <div class="space"></div>
+      <button class="btn btn-lg btn-primary btn-block button" (click)="logOut()">Sign Out</button> 
+    </div>
+    <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>    
+  </form>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>

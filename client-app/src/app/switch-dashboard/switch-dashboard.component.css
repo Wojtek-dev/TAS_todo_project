@@ -1,0 +1,25 @@
+.all{
+    text-align: center;
+    width: 30vw;
+}
+img{
+    width: 15vw;
+}
+table{
+    width: 100%;
+}
+.cell{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.header{
+    text-align: left;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+.space{
+    width: 15px;
+}

@@ -1,0 +1,12 @@
+<div class="text-center container">
+  <form class="form-createdashboard">
+    <img src="https://support.any.do/wp-content/uploads/2018/07/icon-small.png">
+    <h1 class="h3 mb-3 font-weight-normal">Create new dashboard</h1>
+    <label for="inputDashboard" class="sr-only">Please write name of new dashboard</label>
+    <input type="text" id="inputDashboard" class="form-control" placeholder="Dashboard" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" required>
+    <br/>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="addDashboard()">Submit</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="back()">Back</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
+  </form>
+</div>

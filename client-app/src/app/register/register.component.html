@@ -1,0 +1,18 @@
+<div class="text-center container">
+    <form class="form-signin">
+      <img src="https://support.any.do/wp-content/uploads/2018/07/icon-small.png">
+      <h1 class="h3 mb-3 font-weight-normal">Please register</h1>
+      <label for="inputNickname" class="sr-only">Nickname</label>
+      <input type="text" id="inputNickname" class="form-control" placeholder="Nickname" [(ngModel)]="nickname" [ngModelOptions]="{standalone: true}" required autofocus>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required autofocus>
+      <label matInput for="inputConfirmPassword" class="sr-only">Confirm password</label>
+      <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password" [(ngModel)]="confirmPassword" [ngModelOptions]="{standalone: true}" required autofocus>
+      <label class="validate" [hidden]="validatePasswords()">Passwords not same!</label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="register()">Confirm</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="back()">Back</button>      
+      <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
+    </form>
+  </div>
